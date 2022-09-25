@@ -1,0 +1,62 @@
+@import url("https://unpkg.com/@picocss/pico");
+faux-text, #comms-group [contenteditable=true], #selfbox.small [contenteditable]:hover, #selfbox.small [contenteditable]:focus, #selfbox.small [contenteditable]:active,
+#otherbox.small [contenteditable]:hover,
+#otherbox.small [contenteditable]:focus,
+#otherbox.small [contenteditable]:active, #selfbox [contenteditable=true],
+#otherbox [contenteditable=true] {
+  cursor: text;
+  --background-color: var(--form-element-background-color);
+  --border-color: var(--form-element-border-color);
+  --color: var(--form-element-color);
+  --box-shadow: none;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  color: var(--color);
+  font-weight: var(--font-weight);
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+  margin-bottom: var(--spacing);
+}
+faux-text:active, #comms-group [contenteditable=true]:active, #selfbox.small [contenteditable]:active,
+#otherbox.small [contenteditable]:active, #selfbox [contenteditable=true]:active,
+#otherbox [contenteditable=true]:active, faux-text:focus, #comms-group [contenteditable=true]:focus, #selfbox.small [contenteditable]:focus,
+#otherbox.small [contenteditable]:focus, #selfbox [contenteditable=true]:focus,
+#otherbox [contenteditable=true]:focus {
+  --border-color: var(--form-element-active-border-color);
+}
+
+#selfbox,
+#otherbox {
+  margin-bottom: var(--spacing);
+}
+#selfbox.small,
+#otherbox.small {
+  display: flex;
+  align-items: center;
+}
+#selfbox.small label,
+#otherbox.small label {
+  flex-grow: 1;
+}
+#selfbox.small *,
+#otherbox.small * {
+  white-space: nowrap;
+}
+#selfbox.small [contenteditable],
+#otherbox.small [contenteditable] {
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  border: var(--border-width) solid transparent;
+  padding-right: 0;
+  margin: 0;
+  transition: padding var(--transition);
+}
+#selfbox.small [contenteditable]:hover, #selfbox.small [contenteditable]:focus, #selfbox.small [contenteditable]:active,
+#otherbox.small [contenteditable]:hover,
+#otherbox.small [contenteditable]:focus,
+#otherbox.small [contenteditable]:active {
+  transition: padding var(--transition);
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

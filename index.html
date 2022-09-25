@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nullab</title>
+
+  <!-- <script defer src="simple-peer-wrapper.min.js"></script> -->
+  <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+  <script defer src="client.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+    <body>
+        <main class="container" id="connect-group">
+            <div id="selfbox">
+            <label for="selfId">your ID:</label>
+            <div contenteditable="true" spellcheck="false" name="selfId" id="selfId"></div>
+        
+            <button id="selfSave" style="display: none;">use ID</button>
+            </div>
+            <div id="otherbox">
+            <label for="otherId">connect to:</label>
+            <div contenteditable="true" spellcheck="false" name="otherId" id="otherId"></div>
+            </div>
+            <button id="connect"> connect</button>
+            <div id="status"></div>
+        </main>
+        <main class="container" id="comms-group" style="display: none;">
+            <label for="msg"></label>
+            <div contenteditable="true" spellcheck="false" name="msg" id="msg" rows="4"></div>
+            <button id="send">send</button>
+            <pre id="convo"></pre>
+        </main>
+        <main class="container">
+            <!-- <button id="nextStep" display: none>next</button> -->
+        </main>
+    </body>
+</html>
